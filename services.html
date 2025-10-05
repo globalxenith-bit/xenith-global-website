@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services | Xenith Global</title>
+    <style>
+        :root { /* Same colors as index.html */
+            --color-primary: #007AFF; 
+            --color-secondary: #FFC300; 
+            --color-background-dark: #1A202C; 
+            --color-card-dark: #2D3748; 
+            --color-text-light: #F7FAFC; 
+        }
+        body { margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background-color: var(--color-background-dark); color: var(--color-text-light); scroll-behavior: smooth; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        .text-center { text-align: center; }
+        
+        /* HEADER/NAV - (Same styles as index.html) */
+        header { background-color: rgba(26, 32, 44, 0.9); padding: 15px 0; position: fixed; width: 100%; top: 0; z-index: 1000; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); }
+        .nav-content { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.5rem; font-weight: 700; color: var(--color-secondary); }
+        .logo img { height: 30px; vertical-align: middle; margin-right: 10px; }
+        nav a { color: var(--color-text-light); text-decoration: none; margin-left: 30px; font-weight: 500; transition: color 0.3s; }
+        nav a:hover { color: var(--color-primary); }
+        
+        /* SECTIONS */
+        section { padding: 100px 0; }
+        h2 { font-size: 2.5rem; font-weight: 700; margin-bottom: 20px; color: var(--color-primary); display: inline-block; padding-bottom: 10px; }
+        h3 { color: var(--color-secondary); font-size: 1.8rem; margin-top: 0; border-bottom: 2px solid var(--color-card-dark); padding-bottom: 10px; margin-bottom: 20px;}
+
+        /* SERVICE GRID LAYOUT */
+        #services-list { padding-top: 150px; } /* Space for fixed header */
+        .service-block { 
+            background-color: var(--color-card-dark); 
+            padding: 40px; 
+            border-radius: 12px; 
+            margin-bottom: 40px; 
+            display: flex; 
+            flex-direction: column;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+            transition: transform 0.4s;
+        }
+        .service-block:hover { transform: translateY(-10px); }
+        
+        .service-block ul { list-style: none; padding: 0; }
+        .service-block ul li { margin-bottom: 10px; padding-left: 20px; position: relative; opacity: 0.9; }
+        .service-block ul li:before { 
+            content: "•"; 
+            color: var(--color-primary); 
+            font-weight: bold; 
+            display: inline-block; 
+            width: 1em; 
+            margin-left: -1em; 
+        }
+
+        /* FOOTER - (Same styles as index.html) */
+        footer { background-color: #111; padding: 40px 0; font-size: 0.9rem; }
+
+        /* CTA BUTTON - (Same styles as index.html) */
+        .cta-button { display: inline-block; padding: 15px 35px; background-color: var(--color-primary); color: white; text-decoration: none; font-weight: 600; border-radius: 5px; transition: background-color 0.3s, transform 0.2s; }
+        .cta-button:hover { background-color: #0056b3; transform: translateY(-2px); }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-content">
+            <div class="logo">
+                <img src="xenith-logo.png" alt="Xenith Global Logo">XENITH GLOBAL
+            </div>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="services.html" style="color: var(--color-primary); border-bottom: 2px solid var(--color-secondary);">Services</a>
+                <a href="contact.html" class="cta-button" style="margin-left: 40px; padding: 8px 18px;">Contact Us</a>
+            </nav>
+        </div>
+    </header>
+
+    <section id="services-list" class="text-center">
+        <div class="container">
+            <h2>Our Integrated Service Pillars</h2>
+            <p style="font-size: 1.2rem; max-width: 900px; margin: 20px auto 70px; opacity: 0.9;">
+                From the critical backbone of IT to the meticulous details of global trade, Xenith Global delivers specialized expertise under one unified partnership.
+            </p>
+
+            <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 40px;">
+                <div class="service-block">
+                    <h3>Digital & IT Consulting</h3>
+                    <p>Future-proofing your business model with strategic technology adoption and security.</p>
+                    <ul>
+                        <li>Cloud Strategy & Migration (AWS/Azure)</li>
+                        <li>Cybersecurity & Data Compliance</li>
+                        <li>Bespoke Software Development</li>
+                        <li>IT Infrastructure & Support</li>
+                    </ul>
+                </div>
+
+                <div class="service-block">
+                    <h3>Financial & Corporate Advisory</h3>
+                    <p>Expert guidance to maximize capital efficiency and minimize market risk.</p>
+                    <ul>
+                        <li>Mergers & Acquisitions (M&A) Due Diligence</li>
+                        <li>Investment Strategy & Capital Planning</li>
+                        <li>Regulatory Compliance & Audit Support</li>
+                        <li>Risk Management & Mitigation</li>
+                    </ul>
+                </div>
+
+                <div class="service-block">
+                    <h3>Import/Export & Global Trade</h3>
+                    <p>Streamlining international logistics, sourcing, and trade documentation for seamless operations.</p>
+                    <ul>
+                        <li>Supply Chain Optimization</li>
+                        <li>Customs Clearance & Documentation</li>
+                        <li>International Sourcing & Procurement</li>
+                        <li>Global Logistics Management</li>
+                    </ul>
+                </div>
+
+                <div class="service-block">
+                    <h3>Healthcare & Specialized Services</h3>
+                    <p>Dedicated support for high-stakes sectors requiring deep industry knowledge and compliance.</p>
+                    <ul>
+                        <li>Healthcare Operations & Compliance</li>
+                        <li>Specialized Staffing Solutions (IT/Clinical)</li>
+                        <li>Market Entry Strategy</li>
+                        <li>Legal & Regulatory Advisory</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <a href="contact.html" class="cta-button" style="margin-top: 50px;">LET'S DISCUSS YOUR SPECIFIC NEEDS</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container text-center">
+            <p>&copy; 2024 Xenith Global. All Rights Reserved. | <a href="contact.html" style="color: var(--color-primary);">Contact Us</a></p>
+        </div>
+    </footer>
+
+</body>
+</html>

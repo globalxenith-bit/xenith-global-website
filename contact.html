@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Xenith Global | Schedule a Strategy Session</title>
+    <style>
+        :root { /* Same colors as index.html */
+            --color-primary: #007AFF; 
+            --color-secondary: #FFC300; 
+            --color-background-dark: #1A202C; 
+            --color-card-dark: #2D3748; 
+            --color-text-light: #F7FAFC; 
+        }
+        body { margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background-color: var(--color-background-dark); color: var(--color-text-light); scroll-behavior: smooth; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        .text-center { text-align: center; }
+        
+        /* HEADER/NAV - (Same styles as index.html) */
+        header { background-color: rgba(26, 32, 44, 0.9); padding: 15px 0; position: fixed; width: 100%; top: 0; z-index: 1000; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); }
+        .nav-content { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.5rem; font-weight: 700; color: var(--color-secondary); }
+        .logo img { height: 30px; vertical-align: middle; margin-right: 10px; }
+        nav a { color: var(--color-text-light); text-decoration: none; margin-left: 30px; font-weight: 500; transition: color 0.3s; }
+        nav a:hover { color: var(--color-primary); }
+        
+        /* SECTIONS */
+        section { padding: 100px 0; }
+        #contact-hero { padding-top: 150px; } /* Space for fixed header */
+        h2 { font-size: 2.5rem; font-weight: 700; margin-bottom: 20px; color: var(--color-primary); display: inline-block; padding-bottom: 10px; }
+        
+        /* CONTACT FORM STYLES */
+        .contact-form-container { 
+            background-color: var(--color-card-dark);
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+            max-width: 700px;
+            margin: 40px auto;
+        }
+        input[type="text"], input[type="email"], select, textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            border: 1px solid #555;
+            background-color: var(--color-background-dark);
+            color: var(--color-text-light);
+            box-sizing: border-box; /* Important for padding/width */
+        }
+        textarea { resize: vertical; }
+
+        .cta-button { /* Re-using primary button style */
+            display: inline-block; padding: 15px 35px; background-color: var(--color-primary); color: white; text-decoration: none; font-weight: 600; border-radius: 5px; transition: background-color 0.3s, transform 0.2s; border: none; cursor: pointer;
+        }
+        .cta-button:hover { background-color: #0056b3; transform: translateY(-2px); }
+
+        /* CONTACT INFO */
+        .info-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; margin-top: 40px; text-align: center;}
+        .info-box h3 { color: var(--color-secondary); margin-bottom: 5px; }
+        .info-box p { margin-top: 0; opacity: 0.9; }
+
+        /* FOOTER - (Same styles as index.html) */
+        footer { background-color: #111; padding: 40px 0; font-size: 0.9rem; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-content">
+            <div class="logo">
+                <img src="xenith-logo.png" alt="Xenith Global Logo">XENITH GLOBAL
+            </div>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="services.html">Services</a>
+                <a href="contact.html" class="cta-button" style="margin-left: 40px; padding: 8px 18px; border-bottom: 2px solid var(--color-secondary);">Contact Us</a>
+            </nav>
+        </div>
+    </header>
+
+    <section id="contact-hero" class="text-center">
+        <div class="container">
+            <h2>Ready to Elevate Your Strategy?</h2>
+            <p style="font-size: 1.2rem; max-width: 800px; margin: 20px auto 40px; opacity: 0.9;">
+                Tell us about your challenge. We'll connect you with the specialist best suited to navigate your multi-sector needs.
+            </p>
+
+            <div class="contact-form-container">
+                <form action="YOUR_FORM_SUBMISSION_ENDPOINT" method="POST">
+                    <input type="text" name="name" placeholder="Your Full Name" required>
+                    <input type="text" name="company" placeholder="Company Name" required>
+                    <input type="email" name="email" placeholder="Business Email" required>
+                    <input type="text" name="phone" placeholder="Phone Number (Optional)">
+                    
+                    <select name="service" required>
+                        <option value="">-- Select Your Primary Area of Interest --</option>
+                        <option value="IT Consulting">IT Consulting & Digital Transformation</option>
+                        <option value="Financial Advisory">Financial Advisory & M&A</option>
+                        <option value="Global Trade">Global Trade & Import/Export</option>
+                        <option value="Healthcare/Specialized">Healthcare & Specialized Services</option>
+                        <option value="General Inquiry">General Inquiry</option>
+                    </select>
+                    
+                    <textarea name="message" rows="5" placeholder="Describe your challenge or goal..." required></textarea>
+                    
+                    <button type="submit" class="cta-button" style="width: 100%;">SEND INQUIRY TO OUR TEAM</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section id="info" style="background-color: var(--color-card-dark);">
+        <div class="container text-center">
+            <h2>Direct Connection</h2>
+            <div class="info-grid">
+                <div class="info-box">
+                    <h3>Email</h3>
+                    <p>info@xenithglobal.com</p>
+                </div>
+                <div class="info-box">
+                    <h3>Phone</h3>
+                    <p>+91 98765 43210</p>
+                </div>
+                <div class="info-box">
+                    <h3>Address</h3>
+                    <p>Global Headquarters<br> [Your City/Region Here]</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container text-center">
+            <p>&copy; 2024 Xenith Global. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
