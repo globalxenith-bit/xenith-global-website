@@ -3,22 +3,13 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Xenith Global | Your Single Horizon for Infinite Solutions</title>
-  <meta name="description" content="Xenith Global — Strategic consulting, integrated finance, digital transformation & global trade mastery. One partner. Infinite solutions." />
-  <!-- Open Graph (swap images when ready) -->
-  <meta property="og:title" content="Xenith Global — Infinite Solutions" />
-  <meta property="og:description" content="Strategic consulting, finance, tech & trade solutions that scale." />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="og-image.jpg" />
-
-  <!-- Google Fonts -->
+  <title>Contact Xenith Global | Schedule a Strategy Session</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Poppins:wght@600;800&display=swap" rel="stylesheet">
-
   <style>
     :root{
-      --primary:#007AFF; /* your blue */
-      --accent:#FFC300;  /* gold */
-      --bg:#0f1720;      /* deep */
+      --primary:#007AFF;
+      --accent:#FFC300;
+      --bg:#0f1720;
       --card:#162029;
       --muted:#bfc8d6;
       --text:#F7FAFC;
@@ -26,443 +17,112 @@
       --container:1200px;
       --glass: rgba(255,255,255,0.03);
     }
-    *{box-sizing:border-box;}
-    html,body{height:100%;}
-    body{
-      margin:0;
-      font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-      background: linear-gradient(180deg, var(--bg) 0%, #070809 100%);
-      color:var(--text);
-      -webkit-font-smoothing:antialiased;
-      -moz-osx-font-smoothing:grayscale;
-      scroll-behavior:smooth;
-    }
-    .container{max-width:var(--container); margin:0 auto; padding:0 20px;}
-    a{color:inherit;}
-    /* Skip link */
-    .skip-link{position:absolute;left:-999px;top:auto;width:1px;height:1px;overflow:hidden}
-    .skip-link:focus{left:10px;top:10px;width:auto;height:auto;padding:8px 12px;background:#000;color:#fff;border-radius:6px;z-index:9999}
-
-    /* Header */
-    header{
-      position:fixed;left:0;right:0;top:0;z-index:1000;
-      backdrop-filter: blur(6px);
-      background: linear-gradient(180deg, rgba(10,14,18,0.6), rgba(10,14,18,0.35));
-      border-bottom:1px solid rgba(255,255,255,0.03);
-    }
-    .nav-row{display:flex;align-items:center;justify-content:space-between;height:68px;}
-    .brand{display:flex;align-items:center;gap:12px;font-weight:800;font-family:Poppins,Inter;}
-    .brand img{height:36px;width:auto;display:block}
-    nav{display:flex;align-items:center;gap:20px;}
-    nav a{color:var(--muted);text-decoration:none;font-weight:600;padding:8px 10px;border-radius:8px}
-    nav a:hover{color:var(--text); background:var(--glass)}
-    .cta-primary{background:var(--primary); color:#fff; padding:8px 14px;border-radius:8px;font-weight:700;box-shadow:0 6px 18px rgba(0,122,255,0.12)}
-    .cta-secondary{border:1px solid rgba(255,255,255,0.06);padding:7px 12px;border-radius:8px}
-
-    /* Mobile nav */
-    .burger{display:none;border:0;background:transparent;color:var(--text);font-size:20px;padding:6px}
-    .mobile-nav {display:none}
-    @media (max-width:900px){
-      nav{display:none}
-      .burger{display:inline-flex}
-    }
-
-    /* HERO */
-    #hero{min-height:88vh;display:flex;align-items:center;padding-top:80px;position:relative;overflow:hidden}
-    /* animated gradient shapes */
-    #hero::after{
-      content:"";
-      position:absolute;right:-10%;top:-20%;width:70%;height:120%;
-      background: radial-gradient(circle at 20% 20%, rgba(0,122,255,0.12), transparent 10%),
-                  radial-gradient(circle at 80% 80%, rgba(255,195,0,0.08), transparent 10%);
-      transform:rotate(12deg);filter:blur(40px);opacity:0.9;pointer-events:none;
-    }
-    .hero-grid{display:grid;grid-template-columns:1fr 420px;gap:40px;align-items:center;width:100%}
-    .kicker{display:inline-block;padding:6px 10px;background:rgba(255,255,255,0.03);border-radius:999px;color:var(--muted);font-weight:600;margin-bottom:18px}
-    h1{font-size:48px;line-height:1.02;margin:0 0 16px;font-family:Poppins, Inter;font-weight:800}
-    .headline-highlight{color:var(--accent)}
-    p.lead{color:var(--muted);max-width:680px;margin:0 0 26px;font-size:18px}
-    .hero-ctas{display:flex;gap:14px;align-items:center}
-
-    /* RIGHT CARD */
-    .card-visual{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); padding:26px;border-radius:16px;box-shadow:0 10px 30px rgba(2,6,23,0.6);border:1px solid rgba(255,255,255,0.03)}
-    .card-visual img{max-width:100%;display:block;border-radius:10px}
-
-    /* Sections */
-    section{padding:80px 0}
-    h2{color:var(--primary);display:inline-block;margin-bottom:8px;font-size:28px}
-    .sub{color:var(--muted);margin-bottom:26px}
-
-    /* services grid & interactive cards */
-    .grid{display:grid;gap:22px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
-    .service{
-      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
-      padding:22px;border-radius:12px;border:1px solid rgba(255,255,255,0.03);
-      transition:transform .28s ease, box-shadow .28s ease; cursor:pointer;
-      transform-style:preserve-3d;
-    }
-    .service:hover{transform:translateY(-8px) rotateX(2deg); box-shadow:0 16px 40px rgba(2,6,23,0.6)}
-    .service h3{margin:0 0 8px;color:var(--accent)}
-    .service p{color:var(--muted);margin:0;font-size:15px}
-
-    /* metrics */
-    .metrics{display:flex;gap:28px;align-items:center;justify-content:center;margin-top:20px}
-    .metric{background:transparent;padding:12px 20px;border-radius:10px;text-align:center}
-    .metric .num{font-size:36px;font-weight:800;color:var(--accent)}
-    .metric p{margin:6px 0 0;color:var(--muted)}
-
-    /* testimonials */
-    .testimonials{position:relative}
-    .testimonial-track{display:flex;gap:16px;overflow:hidden}
-    .testimonial{min-width:300px;background:linear-gradient(180deg, rgba(255,255,255,0.015), rgba(255,255,255,0.01));padding:18px;border-radius:12px;border:1px solid rgba(255,255,255,0.03)}
-    .test-controls{display:flex;gap:8px;justify-content:center;margin-top:12px}
-    .btn{background:transparent;border:1px solid rgba(255,255,255,0.04);padding:8px 12px;border-radius:8px;color:var(--muted);cursor:pointer}
-    .btn:hover{color:var(--text)}
-
-    /* contact */
-    form.contact{display:grid;gap:12px;max-width:720px;margin:0 auto}
-    input,textarea{padding:12px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:var(--text);outline:none}
-    input:focus,textarea:focus{box-shadow:0 6px 18px rgba(0,0,0,0.5);border-color:var(--primary)}
-
-    /* footer */
-    footer{padding:40px 0;background:#07080a;color:var(--muted);text-align:center;border-top:1px solid rgba(255,255,255,0.02)}
-
-    /* reveal */
-    .reveal{opacity:0;transform:translateY(12px);transition:opacity .6s ease, transform .6s ease}
+    body{margin:0;font-family:Inter,system-ui,Arial;background:linear-gradient(180deg,var(--bg) 0%,#070809 100%);color:var(--text);scroll-behavior:smooth}
+    .container{max-width:var(--container);margin:0 auto;padding:0 20px;}
+    a{color:inherit;text-decoration:none}
+    header{position:fixed;top:0;left:0;right:0;z-index:1000;backdrop-filter:blur(6px);background:linear-gradient(180deg,rgba(10,14,18,0.7),rgba(10,14,18,0.4));border-bottom:1px solid rgba(255,255,255,0.03)}
+    .nav-row{display:flex;align-items:center;justify-content:space-between;height:68px}
+    .brand{display:flex;align-items:center;gap:12px;font-weight:800;font-family:Poppins}
+    .brand img{height:34px}
+    nav{display:flex;align-items:center;gap:20px}
+    nav a{color:var(--muted);padding:8px 12px;border-radius:8px;font-weight:600}
+    nav a:hover{background:var(--glass);color:var(--text)}
+    .cta-primary{background:var(--primary);color:#fff;padding:8px 14px;border-radius:8px;font-weight:700}
+    .burger{display:none;background:none;border:0;font-size:20px;color:var(--text)}
+    .mobile-nav{display:none}
+    @media(max-width:900px){nav{display:none}.burger{display:block}}
+    section{padding:100px 0}
+    h2{color:var(--primary);font-size:32px;font-family:Poppins;font-weight:800;margin:0 0 12px}
+    .sub{color:var(--muted);max-width:800px;margin:0 auto 30px;text-align:center}
+    /* Form */
+    form{display:grid;gap:16px;max-width:700px;margin:0 auto;background:var(--card);padding:40px;border-radius:16px;border:1px solid rgba(255,255,255,0.05);box-shadow:0 8px 20px rgba(0,0,0,0.5)}
+    input,select,textarea{padding:14px;border-radius:8px;border:1px solid rgba(255,255,255,0.1);background:rgba(255,255,255,0.04);color:var(--text);font-size:15px}
+    input:focus,select:focus,textarea:focus{border-color:var(--primary);outline:none;box-shadow:0 0 0 2px rgba(0,122,255,0.3)}
+    button[type="submit"]{background:var(--primary);color:#fff;font-weight:700;padding:14px;border:none;border-radius:10px;cursor:pointer;transition:0.2s}
+    button[type="submit"]:hover{transform:translateY(-2px)}
+    .success{display:none;text-align:center;color:var(--accent);font-weight:600;margin-top:14px}
+    /* Info grid */
+    .info-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px;margin-top:60px}
+    .info-box{background:var(--card);padding:20px;border-radius:12px;border:1px solid rgba(255,255,255,0.05);text-align:center;transition:0.3s}
+    .info-box:hover{transform:translateY(-4px)}
+    .info-box h3{color:var(--accent);margin-bottom:8px}
+    /* Reveal */
+    .reveal{opacity:0;transform:translateY(12px);transition:0.6s}
     .revealed{opacity:1;transform:none}
-
-    /* theme toggle */
-    .theme-toggle{background:transparent;border:1px solid rgba(255,255,255,0.04);padding:8px;border-radius:10px;color:var(--muted);cursor:pointer}
-
-    /* small screens */
-    @media (max-width:900px){
-      .hero-grid{grid-template-columns:1fr; text-align:center}
-      .card-visual{order:2}
-      .mobile-nav{display:block;position:fixed;left:0;right:0;top:68px;background:linear-gradient(180deg,rgba(7,9,10,0.95),#070809);padding:20px;display:none}
-      .mobile-nav.open{display:block}
-      .metrics{flex-direction:column}
-    }
-
-    /* prefers reduced motion */
-    @media (prefers-reduced-motion: reduce){
-      .service, .reveal, .testimonial-track, .hero::after {transition:none!important; animation:none!important}
-    }
+    footer{padding:40px 0;background:#07080a;text-align:center;color:var(--muted);border-top:1px solid rgba(255,255,255,0.03)}
   </style>
 </head>
 <body>
+<header>
+  <div class="container nav-row">
+    <div class="brand"><img src="xenith-logo.svg" alt="Xenith Global logo">XENITH GLOBAL</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html" class="cta-primary">Contact</a>
+    </nav>
+    <button class="burger" id="burger">☰</button>
+  </div>
+  <div class="mobile-nav" id="mobileNav">
+    <a href="index.html">Home</a><br>
+    <a href="services.html">Services</a><br>
+    <a href="contact.html">Contact</a>
+  </div>
+</header>
 
-  <a href="#main" class="skip-link">Skip to content</a>
+<main>
+  <section id="contact-hero">
+    <div class="container text-center">
+      <h2 class="reveal">Ready to Elevate Your Strategy?</h2>
+      <p class="sub reveal">Tell us about your challenge. We'll connect you with the specialist best suited to navigate your multi-sector needs.</p>
 
-  <header>
-    <div class="container nav-row">
-      <div class="brand">
-        <!-- Swap with your SVG logo -->
-        <img src="xenith-logo.svg" alt="Xenith Global logo" />
-        <span style="color:var(--accent)">XENITH</span> GLOBAL
-      </div>
-
-      <nav aria-label="Main navigation">
-        <a href="#hero">Home</a>
-        <a href="#services">Services</a>
-        <a href="#advantage">Why Us</a>
-        <a href="#contact" class="cta-secondary">Contact</a>
-        <a href="#contact" class="cta-primary" style="margin-left:8px">Get Consultation</a>
-        <button class="theme-toggle" id="themeToggle" title="Toggle theme">🌗</button>
-      </nav>
-
-      <button class="burger" id="burger" aria-label="Toggle menu" aria-expanded="false">☰</button>
-    </div>
-
-    <!-- Mobile nav -->
-    <div class="mobile-nav" id="mobileNav" aria-hidden="true">
-      <a href="#hero">Home</a><br/>
-      <a href="#services">Services</a><br/>
-      <a href="#advantage">Why Us</a><br/>
-      <a href="#contact">Contact</a><br/>
-    </div>
-  </header>
-
-  <main id="main">
-    <!-- HERO -->
-    <section id="hero" class="container">
-      <div class="hero-grid">
-        <div>
-          <div class="kicker">Trusted partner across industries</div>
-          <h1>
-            Your Single Horizon for <span class="headline-highlight" id="rotatingWords">Infinite Solutions</span>
-          </h1>
-          <p class="lead">Seamless strategic partnerships across IT, finance, healthcare & global trade. We simplify complexity, manage vendors & deliver measurable growth.</p>
-
-          <div class="hero-ctas">
-            <a href="#contact" class="cta-primary">Schedule a Free Audit</a>
-            <a href="#services" class="cta-secondary">Explore Services</a>
-          </div>
-
-          <!-- metrics small -->
-          <div class="metrics" style="margin-top:28px">
-            <div class="metric">
-              <div class="num" data-target="12">0</div>
-              <p>Industries</p>
-            </div>
-            <div class="metric">
-              <div class="num" data-target="99">0</div>
-              <p>Client Satisfaction (%)</p>
-            </div>
-            <div class="metric">
-              <div class="num" data-target="200">0</div>
-              <p>Projects Delivered</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="card-visual reveal">
-          <!-- Replace with Lottie or hero illustration -->
-          <img src="hero-visual.svg" alt="Illustration of Xenith services">
-          <p style="color:var(--muted);margin-top:12px">We combine strategy, finance & technology into one aligned roadmap — customized to your milestones.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- SERVICES -->
-    <section id="services" class="container">
-      <h2>Our Capabilities</h2>
-      <p class="sub">From advisory to execution — services designed to scale with your ambition.</p>
-
-      <div class="grid">
-        <div class="service reveal" data-service="consulting">
-          <h3>Strategic Consulting</h3>
-          <p>Align leadership, product & market strategy for long-term compounding growth.</p>
-        </div>
-        <div class="service reveal" data-service="finance">
-          <h3>Integrated Finance</h3>
-          <p>Capital planning, treasury design & risk frameworks tailored to your growth stage.</p>
-        </div>
-        <div class="service reveal" data-service="trade">
-          <h3>Global Trade Mastery</h3>
-          <p>Customs, compliance and logistics orchestration for cross-border expansion.</p>
-        </div>
-        <div class="service reveal" data-service="tech">
-          <h3>Digital & Tech Core</h3>
-          <p>Cloud migration, security & product engineering that reduce costs and accelerate velocity.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- ADVANTAGE -->
-    <section id="advantage" class="container">
-      <h2>The Xenith Advantage</h2>
-      <p class="sub">A single partner that unifies vendor stacks, reduces operational friction and drives outcomes.</p>
-
-      <div class="grid" style="grid-template-columns:repeat(3,1fr);margin-top:18px">
-        <div class="card reveal">
-          <h3 style="color:var(--accent)">End-to-end Delivery</h3>
-          <p class="sub">From strategy to implementation — we own the outcome.</p>
-        </div>
-        <div class="card reveal">
-          <h3 style="color:var(--accent)">Data-Driven Decisions</h3>
-          <p class="sub">Dashboards & KPIs aligned to ROI, not activity.</p>
-        </div>
-        <div class="card reveal">
-          <h3 style="color:var(--accent)">Trusted Partnerships</h3>
-          <p class="sub">Local experts + global capabilities — scalable & compliant.</p>
-        </div>
-      </div>
-      <div style="text-align:center;margin-top:20px">
-        <a href="#contact" class="cta-primary">SCHEDULE A CONSULTATION</a>
-      </div>
-    </section>
-
-    <!-- TESTIMONIALS -->
-    <section id="testimonials" class="container testimonials">
-      <h2>What Clients Say</h2>
-      <p class="sub">Real results. Real partners.</p>
-
-      <div class="testimonial-track" id="testimonialTrack">
-        <div class="testimonial reveal">
-          <strong>“Xenith reduced our vendor costs by 27% in 9 months.”</strong>
-          <p style="color:var(--muted);margin-top:8px">— COO, PharmaCo</p>
-        </div>
-        <div class="testimonial reveal">
-          <strong>“Their finance framework gave us board-level clarity.”</strong>
-          <p style="color:var(--muted);margin-top:8px">— CFO, RetailChain</p>
-        </div>
-        <div class="testimonial reveal">
-          <strong>“Seamless migration to cloud with zero downtime.”</strong>
-          <p style="color:var(--muted);margin-top:8px">— CTO, FinTech startup</p>
-        </div>
-      </div>
-
-      <div class="test-controls">
-        <button class="btn" id="prevTest">Prev</button>
-        <button class="btn" id="nextTest">Next</button>
-      </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact" class="container">
-      <h2>Contact Us</h2>
-      <p class="sub">Book a free discovery call or request a tailored proposal.</p>
-
-      <form class="contact" id="contactForm" action="https://formspree.io/f/{YOUR_FORM_ID}" method="POST">
-        <input type="text" name="name" placeholder="Your name" required />
-        <input type="email" name="_replyto" placeholder="Your email" required />
-        <input type="text" name="company" placeholder="Company (optional)" />
-        <textarea name="message" rows="5" placeholder="Tell us your challenge..." required></textarea>
-        <!-- Add a redirect or success message if desired -->
-        <button type="submit" class="cta-primary">Send Request</button>
+      <form id="contactForm" action="https://formspree.io/f/{YOUR_FORM_ID}" method="POST" class="reveal">
+        <input type="text" name="name" placeholder="Your Full Name" required>
+        <input type="text" name="company" placeholder="Company Name">
+        <input type="email" name="email" placeholder="Business Email" required>
+        <input type="text" name="phone" placeholder="Phone Number (Optional)">
+        <select name="service" required>
+          <option value="">-- Select Service --</option>
+          <option>IT Consulting & Digital Transformation</option>
+          <option>Financial Advisory & M&A</option>
+          <option>Global Trade & Import/Export</option>
+          <option>Healthcare & Specialized</option>
+          <option>General Inquiry</option>
+        </select>
+        <textarea name="message" rows="5" placeholder="Describe your challenge..." required></textarea>
+        <button type="submit">Send Inquiry</button>
+        <div class="success" id="successMsg">✅ Thanks! Our team will reach out within 24 hours.</div>
       </form>
-    </section>
-  </main>
 
-  <!-- floating WhatsApp -->
-  <a href="https://wa.me/919XXXXXXXXX" target="_blank" aria-label="Chat on WhatsApp" style="position:fixed;right:20px;bottom:20px;background:linear-gradient(180deg,var(--accent),#e6b000);padding:14px;border-radius:999px;box-shadow:0 10px 30px rgba(0,0,0,0.45);color:#041226;font-weight:700;text-decoration:none;z-index:999">💬 WhatsApp</a>
-
-  <footer>
-    <div class="container">
-      <p>&copy; <span id="year"></span> Xenith Global. All rights reserved. &nbsp; | &nbsp; <a href="#" style="color:var(--primary)">Privacy</a> | <a href="#" style="color:var(--primary)">Terms</a></p>
+      <div class="info-grid">
+        <div class="info-box reveal"><h3>📧 Email</h3><p>info@xenithglobal.com</p></div>
+        <div class="info-box reveal"><h3>📞 Phone</h3><p>+91 98765 43210</p></div>
+        <div class="info-box reveal"><h3>📍 Address</h3><p>Global HQ<br>Your City/Region</p></div>
+      </div>
     </div>
-  </footer>
+  </section>
+</main>
 
-  <!-- Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"Organization",
-    "name":"Xenith Global",
-    "url":"https://yourdomain.com",
-    "logo":"https://yourdomain.com/xenith-logo.svg",
-    "sameAs": []
-  }
-  </script>
+<footer>
+  <div class="container">&copy; <span id="year"></span> Xenith Global. All Rights Reserved.</div>
+</footer>
 
-  <script>
-    // Small utility & initializations
-    document.getElementById('year').textContent = new Date().getFullYear();
-
-    // Mobile nav toggle
-    const burger = document.getElementById('burger');
-    const mobileNav = document.getElementById('mobileNav');
-    burger.addEventListener('click', () => {
-      const open = mobileNav.classList.toggle('open');
-      burger.setAttribute('aria-expanded', open);
-      mobileNav.setAttribute('aria-hidden', !open);
-    });
-
-    // Rotating words in hero (simple)
-    const words = ['Infinite Solutions','End-to-End Delivery','Strategic Advantage','Business Clarity'];
-    let wIdx = 0;
-    const rotating = document.getElementById('rotatingWords');
-    setInterval(()=>{ wIdx = (wIdx+1)%words.length; rotating.textContent = words[wIdx]; }, 2600);
-
-    // Intersection Observer for reveals & counters
-    const io = new IntersectionObserver((entries)=>{
-      entries.forEach(ent=>{
-        if(ent.isIntersecting){
-          ent.target.classList.add('revealed');
-          // counters
-          if(ent.target.querySelectorAll){
-            const nums = ent.target.querySelectorAll('.num');
-            nums.forEach(n=>{
-              if(!n.dataset.started){
-                n.dataset.started = 'true';
-                animateCount(n, +n.dataset.target);
-              }
-            });
-          }
-        }
-      });
-    }, {threshold:0.15});
-    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
-
-    // Also observe global .num counters in hero
-    document.querySelectorAll('.num').forEach(n => {
-      // if visible, animate; otherwise, observer below will animate when its parent reveals
-      // fallback: animate when scrolled into view directly
-      const nIo = new IntersectionObserver(entries=>{
-        entries.forEach(e=>{
-          if(e.isIntersecting && !n.dataset.started){ n.dataset.started='true'; animateCount(n,+n.dataset.target); nIo.disconnect(); }
-        });
-      },{threshold:0.5});
-      nIo.observe(n);
-    });
-
-    function animateCount(el, target){
-      let start=0, duration=1000;
-      const startTime = performance.now();
-      function step(ts){
-        const progress = Math.min((ts-startTime)/duration,1);
-        el.textContent = Math.floor(progress*target + (1-progress)*start);
-        if(progress<1) requestAnimationFrame(step);
-        else el.textContent = target;
-      }
-      requestAnimationFrame(step);
-    }
-
-    // Simple tilt effect for service cards
-    document.querySelectorAll('.service').forEach(card=>{
-      card.addEventListener('mousemove', e=>{
-        const rect = card.getBoundingClientRect();
-        const x = e.clientX - rect.left;
-        const y = e.clientY - rect.top;
-        const cx = rect.width/2, cy = rect.height/2;
-        const dx = (x - cx) / cx;
-        const dy = (y - cy) / cy;
-        const rx = (-dy) * 6;
-        const ry = (dx) * 6;
-        card.style.transform = `perspective(800px) translateZ(0) rotateX(${rx}deg) rotateY(${ry}deg) translateY(-6px)`;
-      });
-      card.addEventListener('mouseleave', ()=>{ card.style.transform = ''; });
-    });
-
-    // Simple testimonial carousel
-    const track = document.getElementById('testimonialTrack');
-    const prev = document.getElementById('prevTest'), next = document.getElementById('nextTest');
-    let tIndex = 0;
-    function showTest(i){
-      const cards = track.querySelectorAll('.testimonial');
-      tIndex = (i+cards.length)%cards.length;
-      const offset = tIndex * (cards[0].offsetWidth + 16);
-      track.style.transform = `translateX(-${offset}px)`;
-      track.style.transition = 'transform .5s ease';
-    }
-    prev.addEventListener('click', ()=> showTest(tIndex-1));
-    next.addEventListener('click', ()=> showTest(tIndex+1));
-    // init
-    window.addEventListener('load', ()=> showTest(0));
-    window.addEventListener('resize', ()=> showTest(tIndex));
-
-    // Theme toggle & prefers-reduced-motion
-    const themeBtn = document.getElementById('themeToggle');
-    const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-    const stored = localStorage.getItem('xenith-theme');
-    if(stored==='light') document.documentElement.style.setProperty('--bg','#f8fafc');
-    themeBtn.addEventListener('click', ()=>{
-      if(document.documentElement.style.getPropertyValue('--bg') === '#f8fafc'){
-        document.documentElement.style.removeProperty('--bg');
-        localStorage.removeItem('xenith-theme');
-      } else {
-        document.documentElement.style.setProperty('--bg','#f8fafc');
-        localStorage.setItem('xenith-theme','light');
-      }
-    });
-
-    // Accessibility: close mobile nav on link click
-    document.querySelectorAll('.mobile-nav a').forEach(a=>{
-      a.addEventListener('click', ()=> { mobileNav.classList.remove('open'); burger.setAttribute('aria-expanded', false); });
-    });
-
-    // Form submit: show a friendly inline message (optional)
-    const form = document.getElementById('contactForm');
-    if(form){
-      form.addEventListener('submit', function(e){
-        // optionally enable AJAX submit to Formspree; for now let the form post
-        // show small toast or disable button
-        const btn = form.querySelector('button[type="submit"]');
-        btn.disabled = true;
-        btn.textContent = 'Sending...';
-        setTimeout(()=>{ btn.textContent = 'Send Request'; btn.disabled = false; }, 4000);
-      });
-    }
-  </script>
+<script>
+document.getElementById('year').textContent=new Date().getFullYear();
+// reveal on scroll
+const io=new IntersectionObserver(entries=>{
+ entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('revealed')})
+},{threshold:0.15});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+// mobile nav
+const burger=document.getElementById('burger'),mobileNav=document.getElementById('mobileNav');
+burger.addEventListener('click',()=>{mobileNav.style.display=mobileNav.style.display==='block'?'none':'block';});
+// form success
+const form=document.getElementById('contactForm');
+form.addEventListener('submit',function(e){
+  const btn=form.querySelector('button[type="submit"]');btn.textContent="Sending..."; 
+  setTimeout(()=>{btn.textContent="Send Inquiry";document.getElementById('successMsg').style.display="block";},2000);
+});
+</script>
 </body>
 </html>
